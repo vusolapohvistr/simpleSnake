@@ -159,6 +159,7 @@ class Game {
 function startGame() {
    console.log('initializing');
    const field = document.getElementById('field');
+   while (field.firstChild) field.removeChild(field.firstChild);
    const game = new Game(field, 20);
    game.initializeField();
    game.drawField();
