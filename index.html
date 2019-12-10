@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .square{
+            width: 25px;
+            height: 25px;
+            background: burlywood;
+            border: 1px solid cadetblue;
+        }
+        .snake{
+            background: red;
+        }
+        .feed{
+            background: fuchsia;
+        }
+        .row-square{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-wrapper">
+            <input type="button" onclick="startGame()" value="Start game">
+        </div>
+        <div id="field">
+
+        </div>
+        <div id="score"></div>
+    </div>
+    <script type="application/javascript" src="index.js"></script>
+</body>
+</html>
