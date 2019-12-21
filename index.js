@@ -148,7 +148,10 @@ class Game {
             this.stopGame();
          }
       }, 1000 / diff);
-      window.onkeydown = (e) => this.lastKeyboardPress = e.code;
+      window.onkeydown = (e) => {
+         if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].find((el) => el === e.code))
+            this.lastKeyboardPress = e.code;
+      }
    }
    stopGame() {
       clearInterval(this.loop);
@@ -164,7 +167,7 @@ function startGame() {
    game.initializeField();
    game.drawField();
    try {
-      game.startGame(4, onScoreChange);
+      game.startGame(20, onScoreChange);
    } catch (e) {
       game.stopGame();
       alert(e.message);
