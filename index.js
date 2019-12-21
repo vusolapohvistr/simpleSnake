@@ -167,7 +167,7 @@ function startGame() {
    game.initializeField();
    game.drawField();
    try {
-      game.startGame(20, onScoreChange);
+      game.startGame(+document.getElementById('diff').value, onScoreChange);
    } catch (e) {
       game.stopGame();
       alert(e.message);
@@ -176,4 +176,8 @@ function startGame() {
 
 function onScoreChange(score) {
    document.getElementById('score').innerText = score;
+}
+
+function onDiffChange() {
+   document.getElementById('diff_value').innerText = document.getElementById('diff').value;
 }

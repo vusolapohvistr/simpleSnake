@@ -34,6 +34,12 @@
         <div id="field">
 
         </div>
+        <div id="speed_changer">
+            <label for="diff">
+                Difficulty <span id="diff_value">10</span>
+                <input type="range" min="1" max="20" id="diff" oninput="onDiffChange()" step="1">
+            </label>
+        </div>
         <div id="score"></div>
     </div>
     <script type="application/javascript" src="index.js"></script>
